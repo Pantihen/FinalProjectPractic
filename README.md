@@ -17,4 +17,4 @@
 3. Откройте: `http://localhost:3000`
 
 ## Публичная версия
-[Посмотреть приложение онлайн]([https://finalprojectpractic.onrender.com])
+[Посмотреть приложение онлайн](https://finalprojectpractic.onrender.com)
