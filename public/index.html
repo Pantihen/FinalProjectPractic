@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Сбор информации</h1>
+            <div class="search-box">
+                <input type="text" id="keyword" placeholder="Ключевое слово (текст, новости, js)">
+                <button id="searchBtn">Найти</button>
+            </div>
+            <div id="error" class="error hidden"></div>
+        </header>
+
+        <main class="grid">
+            <section class="panel">
+                <h2>Найденные URL</h2>
+                <ul id="urlList" class="list"></ul>
+                
+                <div id="progressBox" class="progress-box hidden">
+                    <div class="progress-info">
+                        <span>Прогресс: <b id="percentText">0%</b></span>
+                        <span class="size-text" id="sizeText">0 байт</span>
+                    </div>
+                    <progress id="progressBar" value="0" max="100"></progress>
+                </div>
+            </section>
+
+            <section class="panel">
+                <h2>Сохранено локально</h2>
+                <ul id="savedList" class="list"></ul>
+            </section>
+        </main>
+
+        <section class="viewer">
+            <h2>Просмотр контента</h2>
+            <textarea id="viewer" readonly placeholder="Здесь появится скачанный текст..."></textarea>
+        </section>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

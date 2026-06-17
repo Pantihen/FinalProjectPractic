@@ -1,0 +1,154 @@
+:root {
+  --primary: #007bff;
+  --bg: #f8f9fa;
+  --border: #dee2e6;
+  --error-bg: #fee2e2;
+  --error-text: #dc2626;
+  --danger: #ef4444;
+  --danger-hover: #b91c1c;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background-color: var(--bg);
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h1, h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  color: #212529;
+}
+
+/* Секция поиска */
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  background-color: var(--error-bg);
+  color: var(--error-text);
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.panel {
+  border: 1px solid var(--border);
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fafafa;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  background: white;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  word-break: break-all;
+  transition: border-color 0.2s;
+}
+
+.list li:hover {
+  border-color: var(--primary);
+}
+
+.delete-btn {
+  background-color: var(--danger);
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  background-color: var(--danger-hover);
+}
+
+.progress-box {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #e0f2fe;
+  border-radius: 6px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+progress {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+}
+
+textarea {
+  width: 100%;
+  height: 350px;
+  padding: 15px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  resize: vertical;
+  box-sizing: border-box;
+  font-family: monospace;
+}
